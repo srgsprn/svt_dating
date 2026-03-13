@@ -21,6 +21,22 @@ chmod 600 ~/.ssh/authorized_keys
 
 ---
 
+## Автодеплой при push (GitHub Actions)
+
+При каждом `git push origin main` сайт на VPS обновляется автоматически (в репозитории настроен workflow `.github/workflows/deploy.yml`).
+
+**Один раз настройте секреты в GitHub:** репозиторий **svt_dating** → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**. Добавьте:
+
+| Имя | Значение |
+|-----|----------|
+| `SERVER_HOST` | `85.239.51.175` |
+| `SERVER_USER` | `root` |
+| `DEPLOY_SSH_KEY` | содержимое **приватного** ключа (файл `~/.ssh/id_ed25519` на вашем Mac — скопируйте весь текст, включая строки `-----BEGIN ... KEY-----` и `-----END ... KEY-----`) |
+
+Ключ должен быть от той же пары, чей публичный ключ добавлен в `authorized_keys` на VPS. После сохранения секретов каждый push в `main` будет запускать деплой.
+
+---
+
 ## Быстрый деплой одной командой
 
 1. **Создайте репозиторий** на GitHub: [github.com/new](https://github.com/new) → имя `svt_dating`, Public, без README.
