@@ -622,52 +622,158 @@ img {
   box-shadow: 0 8px 32px rgba(168, 85, 247, 0.2);
 }
 
-.gallery__placeholder-label {
+.gallery__svg-wrap {
   position: relative;
-  z-index: 2;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
 }
 
-.gallery__placeholder-anim {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  opacity: 0.6;
+.gallery__svg {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
 }
 
-/* Profile: gradient shift */
-.gallery__placeholder--profile .gallery__placeholder-anim {
-  background: linear-gradient(125deg, rgba(236, 72, 153, 0.2) 0%, transparent 40%, rgba(168, 85, 247, 0.15) 70%);
-  animation: galleryGradient 8s ease-in-out infinite;
+.gallery__svg circle,
+.gallery__svg path,
+.gallery__svg rect {
+  transform-box: fill-box;
+  transform-origin: center;
 }
 
-/* Connection: soft pulse + wave */
-.gallery__placeholder--connection .gallery__placeholder-anim {
-  background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.25) 0%, transparent 60%);
-  animation: galleryPulse 4s ease-in-out infinite;
+/* Profile block — card, avatar, pulse dot */
+.gallery-svg-card {
+  fill: var(--bg-elevated);
+  stroke: rgba(168, 85, 247, 0.25);
+  stroke-width: 1;
+  transition: stroke 0.3s ease;
 }
 
-/* Assistant: gentle glow move */
-.gallery__placeholder--assistant .gallery__placeholder-anim {
-  background: linear-gradient(180deg, transparent 0%, rgba(236, 72, 153, 0.12) 50%, transparent 100%);
-  animation: galleryGlow 6s ease-in-out infinite;
+.gallery__placeholder--profile:hover .gallery-svg-card {
+  stroke: rgba(236, 72, 153, 0.4);
 }
 
-@keyframes galleryGradient {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.05); }
+.gallery-svg-avatar {
+  stroke: rgba(168, 85, 247, 0.4);
+  stroke-width: 1.5;
 }
 
-@keyframes galleryPulse {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.15); }
+.gallery-svg-avatar--profile {
+  fill: var(--accent-muted);
+  animation: svgAvatarPulse 2.5s ease-in-out infinite;
 }
 
-@keyframes galleryGlow {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.6; }
+.gallery-svg-line {
+  fill: var(--text-muted);
+  opacity: 0.7;
+}
+
+.gallery-svg-line--short {
+  opacity: 0.4;
+}
+
+.gallery-svg-dot {
+  fill: var(--accent);
+}
+
+.gallery-svg-dot--pulse {
+  animation: svgDotPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes svgDotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.25); }
+}
+
+/* Connection block — two avatars, waves */
+.gallery-svg-avatar--left {
+  fill: rgba(236, 72, 153, 0.3);
+  stroke: rgba(236, 72, 153, 0.5);
+  stroke-width: 1.5;
+  animation: svgFloat 3s ease-in-out infinite;
+}
+
+.gallery-svg-avatar--right {
+  fill: rgba(168, 85, 247, 0.3);
+  stroke: rgba(168, 85, 247, 0.5);
+  stroke-width: 1.5;
+  animation: svgFloat 3s ease-in-out infinite 0.5s;
+}
+
+.gallery-svg-wave {
+  fill: none;
+  stroke: rgba(168, 85, 247, 0.5);
+  stroke-width: 2;
+  stroke-linecap: round;
+  animation: svgWave 2s ease-in-out infinite;
+}
+
+.gallery-svg-wave--2 { animation-delay: 0.2s; }
+.gallery-svg-wave--3 { animation-delay: 0.4s; }
+
+/* Assistant block — bot head, antenna, glow */
+.gallery-svg-bot-head {
+  fill: var(--bg-elevated);
+  stroke: rgba(168, 85, 247, 0.4);
+  stroke-width: 1.5;
+}
+
+.gallery-svg-bot-face {
+  fill: var(--accent-muted);
+  stroke: rgba(236, 72, 153, 0.3);
+  stroke-width: 1;
+}
+
+.gallery-svg-eye {
+  fill: var(--accent);
+  animation: svgBlink 4s ease-in-out infinite;
+}
+
+.gallery-svg-smile {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+.gallery-svg-antenna {
+  fill: none;
+  stroke: rgba(168, 85, 247, 0.6);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.gallery-svg-dot--glow {
+  fill: var(--accent);
+  animation: svgDotGlow 2s ease-in-out infinite;
+}
+
+@keyframes svgAvatarPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+@keyframes svgFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes svgWave {
+  0%, 100% { opacity: 0.4; stroke-dashoffset: 0; }
+  50% { opacity: 0.9; }
+}
+
+@keyframes svgBlink {
+  0%, 45%, 55%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.15); }
+}
+
+@keyframes svgDotGlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
 }
 
 .gallery__item p {
@@ -968,7 +1074,14 @@ img {
   .feature-card:hover {
     transform: none;
   }
-  .gallery__placeholder-anim {
+  .gallery__placeholder-anim,
+  .gallery-svg-avatar--profile,
+  .gallery-svg-dot--pulse,
+  .gallery-svg-avatar--left,
+  .gallery-svg-avatar--right,
+  .gallery-svg-wave,
+  .gallery-svg-eye,
+  .gallery-svg-dot--glow {
     animation: none;
   }
 }
