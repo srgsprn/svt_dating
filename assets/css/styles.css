@@ -18,7 +18,7 @@
   --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-display: 'Playfair Display', Georgia, serif;
   --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  --header-h: 76px;
+  --header-h: 82px;
   --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.3);
   --shadow-glow: 0 0 40px var(--accent-glow);
 }
@@ -128,12 +128,39 @@ img {
   height: 100%;
 }
 
+.header__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-decoration: none;
+}
+
+.header__brand:hover .logo {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header__tagline {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
 .logo {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.4rem;
   color: var(--text);
   letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.header__brand .logo {
+  font-size: 1.85rem;
 }
 
 .logo:hover {
