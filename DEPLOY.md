@@ -6,6 +6,21 @@ GitHub: **srgsprn** / репозиторий **svt_dating**
 
 ---
 
+## Добавить SSH-ключ на VPS (вход без пароля)
+
+Один раз зайдите на VPS **с паролем** (или через веб-консоль Timeweb) и выполните:
+
+```bash
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEJnt3bzowKpgT1opJrnWctyXigs2o0iy6UGaIMpvQ6/ thirdaugust90@gmail.com' >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+```
+
+После этого с вашего Mac можно подключаться по ключу: `ssh root@85.239.51.175` (при этом на Mac должен быть соответствующий **приватный** ключ, например в `~/.ssh/id_ed25519`).
+
+---
+
 ## Быстрый деплой одной командой
 
 1. **Создайте репозиторий** на GitHub: [github.com/new](https://github.com/new) → имя `svt_dating`, Public, без README.
