@@ -437,10 +437,79 @@ img {
 .hero__bg {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background:
     radial-gradient(ellipse 90% 60% at 50% 0%, rgba(236, 72, 153, 0.18) 0%, transparent 55%),
     radial-gradient(ellipse 70% 50% at 80% 70%, rgba(168, 85, 247, 0.12) 0%, transparent 50%);
   pointer-events: none;
+}
+
+/* Hero hearts: two hearts meet in center and merge (lightweight CSS only) */
+.hero__hearts {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero__heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(55vw, 320px);
+  height: auto;
+  transform: translate(-50%, -50%);
+  opacity: 0.14;
+}
+
+.hero__heart-path {
+  fill: var(--accent);
+  stroke: rgba(168, 85, 247, 0.25);
+  stroke-width: 0.5;
+  transform-origin: center;
+}
+
+.hero__heart--left {
+  margin-left: -45vw;
+  animation: heroHeartLeft 14s ease-in-out infinite;
+}
+
+.hero__heart--right {
+  margin-left: 45vw;
+  animation: heroHeartRight 14s ease-in-out infinite;
+}
+
+.hero__heart--merged {
+  opacity: 0;
+  animation: heroHeartMerged 14s ease-in-out infinite;
+}
+
+@keyframes heroHeartLeft {
+  0%, 100% { margin-left: -45vw; opacity: 0.14; transform: translate(-50%, -50%) scale(1); }
+  32% { margin-left: 0; opacity: 0.14; transform: translate(-50%, -50%) scale(1); }
+  38% { margin-left: 0; opacity: 0; transform: translate(-50%, -50%) scale(0.85); }
+  62% { margin-left: 0; opacity: 0; transform: translate(-50%, -50%) scale(0.85); }
+  68% { margin-left: 0; opacity: 0.14; transform: translate(-50%, -50%) scale(1); }
+  100% { margin-left: -45vw; opacity: 0.14; transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes heroHeartRight {
+  0%, 100% { margin-left: 45vw; opacity: 0.14; transform: translate(-50%, -50%) scale(1); }
+  32% { margin-left: 0; opacity: 0.14; transform: translate(-50%, -50%) scale(1); }
+  38% { margin-left: 0; opacity: 0; transform: translate(-50%, -50%) scale(0.85); }
+  62% { margin-left: 0; opacity: 0; transform: translate(-50%, -50%) scale(0.85); }
+  68% { margin-left: 0; opacity: 0.14; transform: translate(-50%, -50%) scale(1); }
+  100% { margin-left: 45vw; opacity: 0.14; transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes heroHeartMerged {
+  0%, 32% { opacity: 0; transform: translate(-50%, -50%) scale(0.7); }
+  38% { opacity: 0; transform: translate(-50%, -50%) scale(0.85); }
+  42% { opacity: 0.22; transform: translate(-50%, -50%) scale(1.08); }
+  58% { opacity: 0.22; transform: translate(-50%, -50%) scale(1.05); }
+  62% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+  68%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(0.7); }
 }
 
 /* ===== Section titles ===== */
@@ -1074,6 +1143,14 @@ img {
   .feature-card:hover {
     transform: none;
   }
+  .hero__heart--left,
+  .hero__heart--right,
+  .hero__heart--merged {
+    animation: none;
+  }
+  .hero__heart--merged { opacity: 0; }
+  .hero__heart--left { margin-left: -25vw; opacity: 0.08; }
+  .hero__heart--right { margin-left: 25vw; opacity: 0.08; }
   .gallery__placeholder-anim,
   .gallery-svg-avatar--profile,
   .gallery-svg-dot--pulse,
