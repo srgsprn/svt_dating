@@ -209,7 +209,7 @@
   function getStoredLang() {
     try {
       var l = localStorage.getItem('svt-lang');
-      return l === 'en' || l === 'ru' ? l : 'ru';
+      return l === 'en' || l === 'ru' ? l : 'en';
     } catch (_) {
       return 'ru';
     }
