@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Optional: keep placeholder, ignore large assets if you add them later
+# *.psd
+# *.fig

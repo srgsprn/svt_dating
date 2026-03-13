@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SVT Dating — знакомства, которые имеют значение. Находите близких по духу людей через голос и искреннее общение, без бесконечного свайпа.">
+  <meta name="keywords" content="знакомства, dating, отношения, голосовые знакомства, приложение для знакомств">
+  <title>SVT Dating — Знакомства с смыслом</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://svtdating.com/">
+  <meta property="og:title" content="SVT Dating — Знакомства с смыслом">
+  <meta property="og:description" content="Находите близких по духу людей через голос и искреннее общение. Без свайпа — только живой контакт.">
+  <meta property="og:image" content="https://svtdating.com/assets/img/og-preview.png">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">SVT Dating</a>
+      <nav class="nav" aria-label="Основное меню">
+        <a href="#how" data-i18n="nav_how">Как это работает</a>
+        <a href="#features" data-i18n="nav_features">Возможности</a>
+        <a href="#pricing" data-i18n="nav_pricing">Тарифы</a>
+        <a href="#faq" data-i18n="nav_faq">Вопросы</a>
+        <div class="nav__controls nav__controls--mobile">
+          <div class="theme-switcher theme-switcher--mobile" role="group" aria-label="Тема">
+            <button type="button" class="theme-switcher__btn" data-theme="dark" aria-pressed="true">🌙</button>
+            <button type="button" class="theme-switcher__btn" data-theme="light" aria-pressed="false">☀️</button>
+          </div>
+          <div class="lang-switcher lang-switcher--mobile" role="group" aria-label="Язык">
+            <button type="button" class="lang-switcher__btn active" data-lang="ru" aria-pressed="true">RU</button>
+            <button type="button" class="lang-switcher__btn" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </div>
+      </nav>
+      <div class="header__controls">
+        <div class="theme-switcher" role="group" aria-label="Тема">
+          <button type="button" class="theme-switcher__btn" data-theme="dark" aria-pressed="true" title="Тёмная тема">🌙</button>
+          <button type="button" class="theme-switcher__btn" data-theme="light" aria-pressed="false" title="Светлая тема">☀️</button>
+        </div>
+        <div class="lang-switcher" role="group" aria-label="Язык">
+          <button type="button" class="lang-switcher__btn active" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" class="lang-switcher__btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" class="btn btn--primary header__cta" data-i18n="nav_download" data-i18n-attr="aria-label" data-i18n-attr-key="aria_download">Скачать</button>
+      </div>
+      <button type="button" class="burger" aria-label="Открыть меню" aria-expanded="false" data-i18n-attr="aria-label" data-i18n-attr-key="aria_menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <p class="hero__label" data-i18n="hero_label">Новый формат знакомств</p>
+        <h1 class="hero__title" data-i18n="hero_title">Знакомства, которые имеют значение</h1>
+        <p class="hero__subtitle" data-i18n="hero_subtitle">Хватит листать. Начинайте общаться.</p>
+        <div class="hero__actions">
+          <a href="#download" class="btn btn--primary btn--lg" data-i18n="hero_btn_download">Скачать приложение</a>
+          <a href="#how" class="btn btn--outline btn--lg" data-i18n="hero_btn_how">Как это работает</a>
+        </div>
+      </div>
+      <div class="hero__bg" aria-hidden="true"></div>
+    </section>
+
+    <section class="intro" id="intro">
+      <div class="container">
+        <h2 class="section-title" data-i18n="intro_title">Настоящие связи с SVT Dating</h2>
+        <p class="intro__text" data-i18n="intro_text">
+          SVT помогает выйти за рамки бесконечного свайпа. Вы рассказываете о себе голосом и отвечаете на простые вопросы — мы подбираем пары по характеру, ценностям и предпочтениям. Чем активнее вы пользуетесь сервисом, тем точнее становятся рекомендации.
+        </p>
+      </div>
+    </section>
+
+    <section class="benefits" id="benefits">
+      <div class="container">
+        <h2 class="section-title" data-i18n="benefits_title">Почему SVT — это по-другому</h2>
+        <ul class="benefits__list">
+          <li class="benefit-card">
+            <span class="benefit-card__num" aria-hidden="true">1</span>
+            <h3 class="benefit-card__title" data-i18n="b1_title">Без свайпа. Только контакт</h3>
+            <p class="benefit-card__text" data-i18n="b1_text">Никакого листания анкет. SVT сразу знакомит вас с подходящими людьми, чтобы вы могли сосредоточиться на общении.</p>
+          </li>
+          <li class="benefit-card">
+            <span class="benefit-card__num" aria-hidden="true">2</span>
+            <h3 class="benefit-card__title" data-i18n="b2_title">Пары под вас</h3>
+            <p class="benefit-card__text" data-i18n="b2_text">По голосу, характеру, фото и настройкам мы подбираем людей, которые действительно соответствуют вашим ожиданиям.</p>
+          </li>
+          <li class="benefit-card">
+            <span class="benefit-card__num" aria-hidden="true">3</span>
+            <h3 class="benefit-card__title" data-i18n="b3_title">Ясность, а не догадки</h3>
+            <p class="benefit-card__text" data-i18n="b3_text">Вы видите, почему диалог не сложился, и получаете понятную обратную связь — без неопределённости.</p>
+          </li>
+          <li class="benefit-card">
+            <span class="benefit-card__num" aria-hidden="true">4</span>
+            <h3 class="benefit-card__title" data-i18n="b4_title">Учится вместе с вами</h3>
+            <p class="benefit-card__text" data-i18n="b4_text">Каждый звонок и выбор улучшают подбор: со временем совпадения становятся точнее.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <div class="container">
+        <h2 class="section-title" data-i18n="how_title">Как это работает</h2>
+        <ul class="how__steps">
+          <li class="step">
+            <div class="step__icon" aria-hidden="true">🎙️</div>
+            <h3 class="step__title" data-i18n="s1_title">Начните с голоса, а не с переписки</h3>
+            <p class="step__text" data-i18n="s1_text">Профиль строится из того, как вы говорите и что показываете — не только из фото.</p>
+          </li>
+          <li class="step">
+            <div class="step__icon" aria-hidden="true">✨</div>
+            <h3 class="step__title" data-i18n="s2_title">Поймите, почему не сложилось</h3>
+            <p class="step__text" data-i18n="s2_text">Получайте понятную обратную связь и двигайтесь дальше осознанно.</p>
+          </li>
+          <li class="step">
+            <div class="step__icon" aria-hidden="true">📞</div>
+            <h3 class="step__title" data-i18n="s3_title">Звоните интересным людям</h3>
+            <p class="step__text" data-i18n="s3_text">Общайтесь с незнакомцами без отображения профилей — только голос и контакт.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="container">
+        <h2 class="section-title" data-i18n="gallery_title">Что внутри приложения?</h2>
+        <div class="gallery__grid">
+          <div class="gallery__item">
+            <div class="gallery__placeholder" role="img" aria-label="Профиль">
+              <span data-i18n="g1_label">Профиль</span>
+            </div>
+            <p data-i18n="g1_text">Профили, где важны характер, голос и настроение, а не только фото.</p>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__placeholder" role="img" aria-label="Общение">
+              <span data-i18n="g2_label">Общение</span>
+            </div>
+            <p data-i18n="g2_text">Функции для живого контакта без долгого ожидания ответов.</p>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__placeholder" role="img" aria-label="Помощник">
+              <span data-i18n="g3_label">Помощник</span>
+            </div>
+            <p data-i18n="g3_text">Встроенный помощник подскажет, как находить более совместимых партнёров.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title" data-i18n="features_title">Ключевые возможности</h2>
+        <div class="features__grid">
+          <article class="feature-card">
+            <h3 class="feature-card__title" data-i18n="f1_title">Знакомства через голос</h3>
+            <p class="feature-card__text" data-i18n="f1_text">Общайтесь в реальном времени и чувствуйте совместимость по голосу и манере общения.</p>
+          </article>
+          <article class="feature-card">
+            <h3 class="feature-card__title" data-i18n="f2_title">Честная обратная связь</h3>
+            <p class="feature-card__text" data-i18n="f2_text">Понимайте, что сработало, а что нет, и как улучшить свои совпадения.</p>
+          </article>
+          <article class="feature-card">
+            <h3 class="feature-card__title" data-i18n="f3_title">Без исчезновений</h3>
+            <p class="feature-card__text" data-i18n="f3_text">Подсказки и структура общения помогают говорить ясно и по делу.</p>
+          </article>
+          <article class="feature-card">
+            <h3 class="feature-card__title" data-i18n="f4_title">Умный подбор</h3>
+            <p class="feature-card__text" data-i18n="f4_text">Мы подбираем людей под ваш тип, предпочтения и стиль — не случайные анкеты.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="safety">
+      <div class="container">
+        <h2 class="section-title" data-i18n="safety_title">Безопасность прежде всего</h2>
+        <ul class="safety__list">
+          <li class="safety__item">
+            <span class="safety__icon" aria-hidden="true">✓</span>
+            <span data-i18n="safety_1">Верифицированные профили</span>
+          </li>
+          <li class="safety__item">
+            <span class="safety__icon" aria-hidden="true">✓</span>
+            <span data-i18n="safety_2">Модерация звонков</span>
+          </li>
+          <li class="safety__item">
+            <span class="safety__icon" aria-hidden="true">✓</span>
+            <span data-i18n="safety_3">Настройки приватности</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <h2 class="section-title" data-i18n="pricing_title">Тарифы</h2>
+        <div class="pricing__grid">
+          <article class="price-card">
+            <h3 class="price-card__name" data-i18n="price_basic_name">Базовый</h3>
+            <p class="price-card__tokens" data-i18n="price_basic_tokens">200 токенов / неделя</p>
+            <p class="price-card__price"><span class="price-card__amount">199 ₽</span> <span data-i18n="price_per_week">/ нед.</span></p>
+            <a href="#download" class="btn btn--outline" data-i18n="price_btn">Выбрать</a>
+          </article>
+          <article class="price-card price-card--featured">
+            <span class="price-card__badge" data-i18n="price_badge">Популярный</span>
+            <h3 class="price-card__name" data-i18n="price_standard_name">Стандарт</h3>
+            <p class="price-card__tokens"><span data-i18n="price_standard_tokens">600 токенов / неделя</span><br><small data-i18n="price_standard_trial">3 дня бесплатно</small></p>
+            <p class="price-card__price"><span class="price-card__amount">499 ₽</span> <span data-i18n="price_per_week">/ нед.</span></p>
+            <a href="#download" class="btn btn--primary" data-i18n="price_btn">Выбрать</a>
+          </article>
+          <article class="price-card">
+            <h3 class="price-card__name" data-i18n="price_premium_name">Премиум</h3>
+            <p class="price-card__tokens" data-i18n="price_premium_tokens">1500 токенов / неделя</p>
+            <p class="price-card__price"><span class="price-card__amount">999 ₽</span> <span data-i18n="price_per_week">/ нед.</span></p>
+            <a href="#download" class="btn btn--outline" data-i18n="price_btn">Выбрать</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container">
+        <h2 class="section-title" data-i18n="faq_title">Частые вопросы</h2>
+        <dl class="faq__list">
+          <div class="faq__item">
+            <dt class="faq__question" data-i18n="faq_q1">Как SVT подбирает пары?</dt>
+            <dd class="faq__answer" data-i18n="faq_a1">Мы учитываем голос, ответы на вопросы, фото, возраст, предпочтения и активность. Алгоритм со временем лучше понимает ваш тип.</dd>
+          </div>
+          <div class="faq__item">
+            <dt class="faq__question" data-i18n="faq_q2">Нужно ли верифицировать профиль?</dt>
+            <dd class="faq__answer" data-i18n="faq_a2">Верификация не обязательна, но повышает доверие других пользователей и улучшает качество совпадений.</dd>
+          </div>
+          <div class="faq__item">
+            <dt class="faq__question" data-i18n="faq_q3">Можно ли пользоваться бесплатно?</dt>
+            <dd class="faq__answer" data-i18n="faq_a3">Да, базовые функции доступны бесплатно. Тарифы дают больше токенов для звонков и расширенные возможности.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="cta" id="download">
+      <div class="container">
+        <h2 class="cta__title" data-i18n="cta_title">Начните знакомства по-новому</h2>
+        <p class="cta__text" data-i18n="cta_text">Скачайте приложение и сделайте первый шаг к осмысленным знакомствам.</p>
+        <div class="cta__buttons">
+          <a href="#" class="btn btn--primary btn--lg" data-i18n="cta_ios">Скачать для iOS</a>
+          <a href="#" class="btn btn--primary btn--lg" data-i18n="cta_android">Скачать для Android</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="logo">SVT Dating</a>
+        <p class="footer__tagline" data-i18n="footer_tagline">Знакомства с смыслом</p>
+      </div>
+      <nav class="footer__nav" aria-label="Подвал">
+        <a href="#how" data-i18n="nav_how">Как это работает</a>
+        <a href="#features" data-i18n="nav_features">Возможности</a>
+        <a href="#pricing" data-i18n="nav_pricing">Тарифы</a>
+        <a href="#faq" data-i18n="nav_faq">Вопросы</a>
+      </nav>
+      <p class="footer__copy" data-i18n="footer_copy">&copy; 2025 SVT Dating. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
