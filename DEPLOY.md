@@ -6,6 +6,27 @@ GitHub: **srgsprn** / репозиторий **svt_dating**
 
 ---
 
+## Быстрый деплой одной командой
+
+1. **Создайте репозиторий** на GitHub: [github.com/new](https://github.com/new) → имя `svt_dating`, Public, без README.
+2. **Настройте SSH-доступ** к VPS (пароль или ключ): `ssh root@85.239.51.175` должен открывать сессию.
+3. Из папки проекта выполните:
+   ```bash
+   cd /Users/monstrik/svt_dating
+   git push -u origin main   # если ещё не пушили
+   chmod +x scripts/deploy-local.sh
+   ./scripts/deploy-local.sh
+   ```
+   Введите пароль от VPS по запросу. Скрипт загрузит файлы, установит nginx, настроит сайт и запустит certbot для HTTPS.
+
+**Только сервер:** если файлы уже на VPS (например, залиты через SCP), подключитесь по SSH и выполните:
+```bash
+curl -sL https://raw.githubusercontent.com/srgsprn/svt_dating/main/scripts/deploy-server.sh | sudo bash
+```
+или скопируйте содержимое `scripts/deploy-server.sh` и выполните на сервере.
+
+---
+
 ## Часть 1. GitHub
 
 ### 1.1. Создать репозиторий на GitHub
