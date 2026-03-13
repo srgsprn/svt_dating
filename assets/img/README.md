@@ -17,3 +17,7 @@
 - **og-preview.png** — в meta `og:image` для превью в Telegram, VK, Facebook и т.д.
 
 Положите файлы в эту папку (`assets/img/`) и при необходимости обновите пути в `index.html`.
+
+## Блок «Что внутри приложения» (Profile, Connection, Assistant)
+
+Сейчас используются CSS-анимации. Для более интерактивного вида можно добавить короткие видео или GIF (например `profile.mp4`, `connection.gif`, `assistant.gif`) и вставить их в блоки `.gallery__placeholder--profile`, `--connection`, `--assistant` в `index.html` через `<video autoplay loop muted playsinline>` или `<img>`.
