@@ -8,7 +8,8 @@
   --text-muted: #b8b0d0;
   --accent: #ec4899;
   --accent-secondary: #a855f7;
-  --accent-gradient: linear-gradient(135deg, #ec4899 0%, #a855f7 50%, #6366f1 100%);
+  --accent-gradient: linear-gradient(135deg, #ec4899 0%, #e0409e 18%, #c855b8 38%, #a855f7 58%, #7c6cf2 78%, #6366f1 100%);
+  --accent-gradient-smooth: linear-gradient(135deg, #ec4899 0%, #e0409e 18%, #c855b8 38%, #a855f7 58%, #7c6cf2 78%, #6366f1 100%);
   --accent-muted: rgba(236, 72, 153, 0.2);
   --accent-glow: rgba(236, 72, 153, 0.4);
   --border: rgba(168, 85, 247, 0.15);
@@ -268,7 +269,10 @@ img {
 .theme-switcher__btn[aria-pressed="true"],
 .lang-switcher__btn.active,
 .lang-switcher__btn[aria-pressed="true"] {
-  background: var(--accent-gradient);
+  background: var(--accent-gradient-smooth);
+  background-size: 100% 100%;
+  background-origin: border-box;
+  background-clip: padding-box;
   color: #fff;
 }
 
@@ -418,10 +422,13 @@ img {
 }
 
 .btn--primary {
-  background: var(--accent-gradient);
+  background: var(--accent-gradient-smooth);
+  background-size: 100% 100%;
+  background-origin: border-box;
+  background-clip: border-box;
   color: #fff;
   -webkit-text-fill-color: #fff;
-  border-color: transparent;
+  border: 2px solid transparent;
   box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
 }
 
@@ -429,6 +436,8 @@ img {
 .btn--primary:focus {
   color: #fff;
   -webkit-text-fill-color: #fff;
+  background: var(--accent-gradient-smooth);
+  background-size: 100% 100%;
 }
 
 .btn--primary:hover {
@@ -1300,9 +1309,14 @@ img {
 
   .theme-switcher__btn,
   .lang-switcher__btn {
-    min-height: 44px;
-    min-width: 44px;
-    padding: 12px;
+    min-height: 36px;
+    min-width: 36px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .lang-switcher__btn {
+    min-width: 36px;
   }
 
   .hero {
