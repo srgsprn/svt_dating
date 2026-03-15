@@ -281,6 +281,17 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  // ----- Pricing: select Basic/Premium (same pink as Standard) -----
+  document.querySelectorAll('.price-card').forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      if (card.classList.contains('price-card--featured')) return;
+      if (card.classList.contains('price-card--selected')) return;
+      e.preventDefault();
+      document.querySelectorAll('.price-card').forEach(function (c) { c.classList.remove('price-card--selected'); });
+      card.classList.add('price-card--selected');
+    });
+  });
+
   // ----- Smooth scroll -----
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
