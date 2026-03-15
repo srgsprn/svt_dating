@@ -1285,9 +1285,9 @@ img {
 }
 
 .footer__logo-img {
-  height: 44px;
+  height: 56px;
   width: auto;
-  max-width: 120px;
+  max-width: 150px;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -1295,17 +1295,12 @@ img {
 .footer__brand .logo {
   display: inline-block;
   margin-bottom: 0;
-}
-
-.footer__tagline {
-  margin: 6px 0 0;
-  font-size: 0.92rem;
-  color: var(--text-muted);
+  font-size: 1.55rem;
 }
 
 .footer__copy {
   margin: 0;
-  font-size: 0.88rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
 }
 
@@ -1540,6 +1535,19 @@ img {
 
   .footer__inner {
     gap: 20px;
+  }
+
+  .footer__logo-img {
+    height: 60px;
+    max-width: 160px;
+  }
+
+  .footer__brand .logo {
+    font-size: 1.35rem;
+  }
+
+  .footer__copy {
+    font-size: 1rem;
   }
 
 }
