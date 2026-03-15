@@ -85,7 +85,7 @@
       cta_text: 'Зарегистрируйтесь на сайте и сделайте первый шаг к осмысленным знакомствам.',
       cta_register: 'Регистрация',
       footer_tagline: 'Знакомства с смыслом',
-      footer_copy: '© 2025 SVT Dating. Все права защищены.'
+      footer_copy: '© 2026 SVT Dating. Все права защищены.'
     },
     en: {
       nav_how: 'How it works',
@@ -165,7 +165,7 @@
       cta_text: 'Register on the site and take the first step toward meaningful dating.',
       cta_register: 'Register',
       footer_tagline: 'Dating that matters',
-      footer_copy: '© 2025 SVT Dating. All rights reserved.'
+      footer_copy: '© 2026 SVT Dating. All rights reserved.'
     }
   };
 
