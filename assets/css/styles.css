@@ -1008,6 +1008,9 @@ img {
 .safety__icon {
   width: 32px;
   height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1015,6 +1018,7 @@ img {
   color: #fff;
   border-radius: var(--radius-pill);
   font-size: 0.85rem;
+  line-height: 1;
 }
 
 /* ===== Pricing ===== */
@@ -1378,18 +1382,32 @@ img {
   .safety__list {
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 16px;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .safety__item {
+    display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
     white-space: normal;
-    max-width: 320px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .safety__item .safety__icon {
+    flex-shrink: 0;
+  }
+
+  .safety__item > span:last-child {
+    flex: 1;
+    line-height: 1.4;
   }
 
   .intro,
