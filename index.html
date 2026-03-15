@@ -37,6 +37,8 @@
         <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
         <a href="#faq" data-i18n="nav_faq">FAQ</a>
         <div class="nav__controls nav__controls--mobile">
+          <a href="#signin" class="header__link header__link--mobile" data-i18n="nav_signin">Sign in</a>
+          <a href="#register" class="btn btn--primary header__cta header__cta--mobile" data-i18n="nav_register">Register</a>
           <div class="theme-switcher theme-switcher--mobile" role="group" aria-label="Theme">
             <button type="button" class="theme-switcher__btn" data-theme="dark" aria-pressed="true">🌙</button>
             <button type="button" class="theme-switcher__btn" data-theme="light" aria-pressed="false">☀️</button>
@@ -56,7 +58,11 @@
           <button type="button" class="lang-switcher__btn" data-lang="ru" aria-pressed="false">RU</button>
           <button type="button" class="lang-switcher__btn active" data-lang="en" aria-pressed="true">EN</button>
         </div>
-        <button type="button" class="btn btn--primary header__cta" data-i18n="nav_download" data-i18n-attr="aria-label" data-i18n-attr-key="aria_download">Download</button>
+        <a href="#" class="header__logo-img" aria-label="SVT Dating">
+          <img src="assets/img/logo-header.png" alt="SVT Dating" width="120" height="48">
+        </a>
+        <a href="#signin" class="header__link" data-i18n="nav_signin">Sign in</a>
+        <a href="#register" class="btn btn--primary header__cta" data-i18n="nav_register">Register</a>
       </div>
       <button type="button" class="burger" aria-label="Open menu" aria-expanded="false" data-i18n-attr="aria-label" data-i18n-attr-key="aria_menu">
         <span></span><span></span><span></span>
@@ -68,10 +74,10 @@
     <section class="hero">
       <div class="container hero__inner">
         <p class="hero__label" data-i18n="hero_label">A new way to date</p>
-        <h1 class="hero__title" data-i18n="hero_title">Dating that matters</h1>
-        <p class="hero__subtitle" data-i18n="hero_subtitle">Stop swiping. Start connecting.</p>
+        <h1 class="hero__title" data-i18n="hero_title">Your time matters!</h1>
+        <p class="hero__subtitle" data-i18n="hero_subtitle">Stop scrolling the feed. Leave the routine to us.</p>
         <div class="hero__actions">
-          <a href="#download" class="btn btn--primary btn--lg" data-i18n="hero_btn_download">Download app</a>
+          <a href="#register" class="btn btn--primary btn--lg" data-i18n="hero_btn_join">Join now</a>
           <a href="#how" class="btn btn--outline btn--lg" data-i18n="hero_btn_how">How it works</a>
         </div>
       </div>
@@ -91,9 +97,9 @@
 
     <section class="intro" id="intro">
       <div class="container">
-        <h2 class="section-title" data-i18n="intro_title">Real connections with SVT Dating</h2>
+        <h2 class="section-title" data-i18n="intro_title">Real dating with SVT Dating</h2>
         <p class="intro__text" data-i18n="intro_text">
-          SVT helps you move beyond endless swiping. You tell us about yourself through voice and simple questions — we match you by personality, values, and preferences. The more you use the service, the better the recommendations.
+          SVT helps you move beyond endless swiping. You tell us about yourself and set the task for our agent — it does all the work for you: finds matches to your criteria and filters out the rest. Your personal AI assistant can run 1000 conversations at once and pick what you want. All you have to do is get ready for the date and choose the restaurant.
         </p>
       </div>
     </section>
@@ -104,18 +110,18 @@
         <ul class="benefits__list">
           <li class="benefit-card">
             <span class="benefit-card__num" aria-hidden="true">1</span>
-            <h3 class="benefit-card__title" data-i18n="b1_title">No swiping. Just connection</h3>
-            <p class="benefit-card__text" data-i18n="b1_text">No more scrolling through profiles. SVT introduces you to the right people so you can focus on real conversation.</p>
+            <h3 class="benefit-card__title" data-i18n="b1_title">Save your time!</h3>
+            <p class="benefit-card__text" data-i18n="b1_text">No more endless scrolling through profiles. You set the task, and SVT introduces you to the right people, filtering out 98% of unsuitable candidates — so you can focus on what's pleasant and useful.</p>
           </li>
           <li class="benefit-card">
             <span class="benefit-card__num" aria-hidden="true">2</span>
-            <h3 class="benefit-card__title" data-i18n="b2_title">Matches made for you</h3>
-            <p class="benefit-card__text" data-i18n="b2_text">We match you with people who fit your voice, personality, photos, and preferences — not random profiles.</p>
+            <h3 class="benefit-card__title" data-i18n="b2_title">No unpleasant communication</h3>
+            <p class="benefit-card__text" data-i18n="b2_text">SVT filters out deceivers, scammers, liars, and time-wasters during dialogues; detects real age, weight, and height from photos. You never have to talk to toxic people.</p>
           </li>
           <li class="benefit-card">
             <span class="benefit-card__num" aria-hidden="true">3</span>
-            <h3 class="benefit-card__title" data-i18n="b3_title">Clarity & smart matching</h3>
-            <p class="benefit-card__text" data-i18n="b3_text_merged">See why it didn't work out and get feedback. Every call improves matching — your matches get better over time.</p>
+            <h3 class="benefit-card__title" data-i18n="b3_title">Only the right candidates</h3>
+            <p class="benefit-card__text" data-i18n="b3_text_merged">You get all the info you'd want about candidates in your dashboard — weight, height, hobbies, family and financial situation, and much more. We match people who truly meet your criteria.</p>
           </li>
         </ul>
       </div>
@@ -127,18 +133,18 @@
         <ul class="how__steps">
           <li class="step">
             <div class="step__icon" aria-hidden="true">🎙️</div>
-            <h3 class="step__title" data-i18n="s1_title">Start with voice, not text</h3>
-            <p class="step__text" data-i18n="s1_text">Your profile is built from how you speak and what you share — not just photos.</p>
-          </li>
-          <li class="step">
-            <div class="step__icon" aria-hidden="true">✨</div>
-            <h3 class="step__title" data-i18n="s2_title">Understand why it didn't work</h3>
-            <p class="step__text" data-i18n="s2_text">Get clear feedback and move on with intention.</p>
+            <h3 class="step__title" data-i18n="s1_title">Share your info</h3>
+            <p class="step__text" data-i18n="s1_text">You provide whatever you're comfortable sharing. The more detailed and interesting, the easier for our SVT agent to build dialogues with potential candidates.</p>
           </li>
           <li class="step">
             <div class="step__icon" aria-hidden="true">📞</div>
-            <h3 class="step__title" data-i18n="s3_title">Call interesting people</h3>
-            <p class="step__text" data-i18n="s3_text">Talk to strangers without showing profiles — voice and connection only.</p>
+            <h3 class="step__title" data-i18n="s2_title">Set tasks for your SVT agent</h3>
+            <p class="step__text" data-i18n="s2_text">Describe your ideal candidate in detail: age, build, height, financial and family situation, hobbies, etc. Our SVT agent analyzes photos, dialogue style, interests; can run psychological and sociotype tests.</p>
+          </li>
+          <li class="step">
+            <div class="step__icon" aria-hidden="true">✨</div>
+            <h3 class="step__title" data-i18n="s3_title">Get your shortlist</h3>
+            <p class="step__text" data-i18n="s3_text">You receive candidates who match your criteria, full chat history, and contact details. All that's left is to arrange a meet or accept an invitation!</p>
           </li>
         </ul>
       </div>
@@ -222,15 +228,15 @@
         <ul class="safety__list">
           <li class="safety__item">
             <span class="safety__icon" aria-hidden="true">✓</span>
-            <span data-i18n="safety_1">Verified profiles</span>
+            <span data-i18n="safety_1">No disclosure of your information</span>
           </li>
           <li class="safety__item">
             <span class="safety__icon" aria-hidden="true">✓</span>
-            <span data-i18n="safety_2">Moderated calls</span>
+            <span data-i18n="safety_2">Your personal data is fully protected</span>
           </li>
           <li class="safety__item">
             <span class="safety__icon" aria-hidden="true">✓</span>
-            <span data-i18n="safety_3">Privacy controls</span>
+            <span data-i18n="safety_3">Your contacts are visible only after approval</span>
           </li>
         </ul>
       </div>
@@ -242,22 +248,22 @@
         <div class="pricing__grid">
           <article class="price-card">
             <h3 class="price-card__name" data-i18n="price_basic_name">Basic</h3>
-            <p class="price-card__tokens" data-i18n="price_basic_tokens">200 tokens / week</p>
-            <p class="price-card__price"><span class="price-card__amount">199 ₽</span> <span data-i18n="price_per_week">/ wk</span></p>
-            <a href="#download" class="btn btn--outline" data-i18n="price_btn">Choose</a>
+            <p class="price-card__tokens"><small data-i18n="price_trial">3 days free</small></p>
+            <p class="price-card__price"><span class="price-card__amount">$40</span> <span data-i18n="price_per_month">/ month</span></p>
+            <a href="#register" class="btn btn--outline" data-i18n="price_btn">Choose</a>
           </article>
           <article class="price-card price-card--featured">
             <span class="price-card__badge" data-i18n="price_badge">Popular</span>
             <h3 class="price-card__name" data-i18n="price_standard_name">Standard</h3>
-            <p class="price-card__tokens"><span data-i18n="price_standard_tokens">600 tokens / week</span><br><small data-i18n="price_standard_trial">3-day free trial</small></p>
-            <p class="price-card__price"><span class="price-card__amount">499 ₽</span> <span data-i18n="price_per_week">/ wk</span></p>
-            <a href="#download" class="btn btn--primary" data-i18n="price_btn">Choose</a>
+            <p class="price-card__tokens"><small data-i18n="price_trial">3 days free</small></p>
+            <p class="price-card__price"><span class="price-card__amount">$100</span> <span data-i18n="price_3months">/ 3 months</span></p>
+            <a href="#register" class="btn btn--primary" data-i18n="price_btn">Choose</a>
           </article>
           <article class="price-card">
             <h3 class="price-card__name" data-i18n="price_premium_name">Premium</h3>
-            <p class="price-card__tokens" data-i18n="price_premium_tokens">1500 tokens / week</p>
-            <p class="price-card__price"><span class="price-card__amount">999 ₽</span> <span data-i18n="price_per_week">/ wk</span></p>
-            <a href="#download" class="btn btn--outline" data-i18n="price_btn">Choose</a>
+            <p class="price-card__tokens"><small data-i18n="price_trial">3 days free</small></p>
+            <p class="price-card__price"><span class="price-card__amount">$300</span> <span data-i18n="price_per_year">/ year</span></p>
+            <a href="#register" class="btn btn--outline" data-i18n="price_btn">Choose</a>
           </article>
         </div>
       </div>
@@ -285,11 +291,10 @@
 
     <section class="cta" id="download">
       <div class="container">
-        <h2 class="cta__title" data-i18n="cta_title">Start dating differently</h2>
-        <p class="cta__text" data-i18n="cta_text">Download the app and take the first step toward meaningful connections.</p>
+        <h2 class="cta__title" data-i18n="cta_title">Start dating in a new way</h2>
+        <p class="cta__text" data-i18n="cta_text">Register on the site and take the first step toward meaningful dating.</p>
         <div class="cta__buttons">
-          <a href="#" class="btn btn--primary btn--lg" data-i18n="cta_ios">Download for iOS</a>
-          <a href="#" class="btn btn--primary btn--lg" data-i18n="cta_android">Download for Android</a>
+          <a href="#register" class="btn btn--primary btn--lg" data-i18n="cta_register">Register</a>
         </div>
       </div>
     </section>
