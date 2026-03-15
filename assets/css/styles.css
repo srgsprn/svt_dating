@@ -1163,8 +1163,57 @@ img {
 
 /* ===== CTA ===== */
 .cta {
+  position: relative;
   padding: 100px 0;
   text-align: center;
+  overflow: hidden;
+}
+
+.cta__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.cta__hearts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cta__heart {
+  position: absolute;
+  width: 80px;
+  height: auto;
+  color: rgba(236, 72, 153, 0.08);
+  top: 50%;
+  left: 50%;
+}
+
+.cta__heart--1 {
+  margin-left: -180px;
+  margin-top: -60px;
+  animation: ctaHeartFloat 12s ease-in-out infinite;
+}
+
+.cta__heart--2 {
+  margin-left: 20px;
+  margin-top: -20px;
+  width: 100px;
+  color: rgba(168, 85, 247, 0.06);
+  animation: ctaHeartFloat 14s ease-in-out infinite 2s;
+}
+
+.cta__heart--3 {
+  margin-left: 160px;
+  margin-top: -70px;
+  width: 60px;
+  animation: ctaHeartFloat 10s ease-in-out infinite 4s;
+}
+
+@keyframes ctaHeartFloat {
+  0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.15); }
 }
 
 .cta__title {
@@ -1424,14 +1473,17 @@ img {
     line-height: 1.4;
   }
 
+  .gallery,
+  .features,
+  .faq {
+    display: none !important;
+  }
+
   .intro,
   .benefits,
   .how,
-  .gallery,
-  .features,
   .safety,
   .pricing,
-  .faq,
   .cta {
     padding: 56px 0;
   }
@@ -1550,6 +1602,7 @@ img {
   .hero__heart--merged { opacity: 0; }
   .hero__heart--left { margin-left: -25vw; opacity: 0.08; }
   .hero__heart--right { margin-left: 25vw; opacity: 0.08; }
+  .cta__heart { animation: none; }
   .gallery__placeholder-anim,
   .gallery-svg-avatar--profile,
   .gallery-svg-dot--pulse,
