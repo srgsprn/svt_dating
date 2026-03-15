@@ -1185,7 +1185,6 @@ img {
   position: absolute;
   width: 80px;
   height: auto;
-  color: rgba(236, 72, 153, 0.08);
   top: 50%;
   left: 50%;
 }
@@ -1193,6 +1192,7 @@ img {
 .cta__heart--1 {
   margin-left: -180px;
   margin-top: -60px;
+  color: rgba(236, 72, 153, 0.28);
   animation: ctaHeartFloat 12s ease-in-out infinite;
 }
 
@@ -1200,7 +1200,7 @@ img {
   margin-left: 20px;
   margin-top: -20px;
   width: 100px;
-  color: rgba(168, 85, 247, 0.06);
+  color: rgba(168, 85, 247, 0.24);
   animation: ctaHeartFloat 14s ease-in-out infinite 2s;
 }
 
@@ -1208,6 +1208,7 @@ img {
   margin-left: 160px;
   margin-top: -70px;
   width: 60px;
+  color: rgba(236, 72, 153, 0.22);
   animation: ctaHeartFloat 10s ease-in-out infinite 4s;
 }
 
@@ -1471,12 +1472,6 @@ img {
   .safety__item > span:last-child {
     flex: 1;
     line-height: 1.4;
-  }
-
-  .gallery,
-  .features,
-  .faq {
-    display: none !important;
   }
 
   .intro,
