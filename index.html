@@ -28,6 +28,7 @@
   <header class="header">
     <div class="container header__inner">
       <a href="#" class="header__brand">
+        <img class="header__logo-img" src="assets/img/logo-header.png" alt="SVT Dating" width="140" height="56">
         <span class="logo">SVT Dating</span>
         <span class="header__tagline" data-i18n="header_tagline">Your AI matches assistant</span>
       </a>
@@ -58,9 +59,6 @@
           <button type="button" class="lang-switcher__btn" data-lang="ru" aria-pressed="false">RU</button>
           <button type="button" class="lang-switcher__btn active" data-lang="en" aria-pressed="true">EN</button>
         </div>
-        <a href="#" class="header__logo-img" aria-label="SVT Dating">
-          <img src="assets/img/logo-header.png" alt="SVT Dating" width="120" height="48">
-        </a>
         <a href="#signin" class="header__link" data-i18n="nav_signin">Sign in</a>
         <a href="#register" class="btn btn--primary header__cta" data-i18n="nav_register">Register</a>
       </div>
@@ -226,18 +224,9 @@
       <div class="container">
         <h2 class="section-title" data-i18n="safety_title">Safety first</h2>
         <ul class="safety__list">
-          <li class="safety__item">
-            <span class="safety__icon" aria-hidden="true">✓</span>
-            <span data-i18n="safety_1">No disclosure of your information</span>
-          </li>
-          <li class="safety__item">
-            <span class="safety__icon" aria-hidden="true">✓</span>
-            <span data-i18n="safety_2">Your personal data is fully protected</span>
-          </li>
-          <li class="safety__item">
-            <span class="safety__icon" aria-hidden="true">✓</span>
-            <span data-i18n="safety_3">Your contacts are visible only after approval</span>
-          </li>
+          <li class="safety__item"><span class="safety__icon" aria-hidden="true">✓</span><span data-i18n="safety_1">No disclosure of your information</span></li>
+          <li class="safety__item"><span class="safety__icon" aria-hidden="true">✓</span><span data-i18n="safety_2">Your personal data is fully protected</span></li>
+          <li class="safety__item"><span class="safety__icon" aria-hidden="true">✓</span><span data-i18n="safety_3">Your contacts are visible only after approval</span></li>
         </ul>
       </div>
     </section>
@@ -246,25 +235,25 @@
       <div class="container">
         <h2 class="section-title" data-i18n="pricing_title">Pricing</h2>
         <div class="pricing__grid">
-          <article class="price-card">
+          <a href="#register" class="price-card" aria-label="Choose Basic">
             <h3 class="price-card__name" data-i18n="price_basic_name">Basic</h3>
             <p class="price-card__tokens"><small data-i18n="price_trial">3 days free</small></p>
             <p class="price-card__price"><span class="price-card__amount">$40</span> <span data-i18n="price_per_month">/ month</span></p>
-            <a href="#register" class="btn btn--outline" data-i18n="price_btn">Choose</a>
-          </article>
-          <article class="price-card price-card--featured">
+            <span class="btn btn--outline" data-i18n="price_btn">Choose</span>
+          </a>
+          <a href="#register" class="price-card price-card--featured" aria-label="Choose Standard">
             <span class="price-card__badge" data-i18n="price_badge">Popular</span>
             <h3 class="price-card__name" data-i18n="price_standard_name">Standard</h3>
             <p class="price-card__tokens"><small data-i18n="price_trial">3 days free</small></p>
             <p class="price-card__price"><span class="price-card__amount">$100</span> <span data-i18n="price_3months">/ 3 months</span></p>
-            <a href="#register" class="btn btn--primary" data-i18n="price_btn">Choose</a>
-          </article>
-          <article class="price-card">
+            <span class="btn btn--primary" data-i18n="price_btn">Choose</span>
+          </a>
+          <a href="#register" class="price-card" aria-label="Choose Premium">
             <h3 class="price-card__name" data-i18n="price_premium_name">Premium</h3>
             <p class="price-card__tokens"><small data-i18n="price_trial">3 days free</small></p>
             <p class="price-card__price"><span class="price-card__amount">$300</span> <span data-i18n="price_per_year">/ year</span></p>
-            <a href="#register" class="btn btn--outline" data-i18n="price_btn">Choose</a>
-          </article>
+            <span class="btn btn--outline" data-i18n="price_btn">Choose</span>
+          </a>
         </div>
       </div>
     </section>
